@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form cá nhân</title>
+    <link rel="stylesheet" href="form.css" class="css">
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1>On-site Inquiries</h1>
+        </div>
+    </header>
+    <main class="main">
+        <div> <b>Firt Name</b><span style="color :red">*</span><br>
+            <input type="text" class="firt-name"><br>
+            <b>Last name</b><span style="color:red">*</span><br>
+
+            <input type="text">
+        </div>
+        <div class="address">
+            <b> Where are you?</b><span style="color:red">*</span><br>
+            <input type="text"><br>
+            street address<br>
+            <input type="text"><br>
+            address line2<br>
+
+        </div>
+        <div class="address2">
+            <table>
+                <tr class="input">
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>State/region/province</td>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><select name="contry" style="width: 170px;">
+                            <option value="sl">-selcet-</option>
+                            <option value="dn">Đà Nẵng</option>
+                            <option value="hn">Hà Nội</option>
+                            <option value="hd">Hải Dương</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Postal/Zip code</td>
+                    <td>contry</td>
+                </tr>
+            </table>
+
+        </div>
+        <div>
+            <h2>What's the progress status?<span style="color:red">*</span> </h2>
+            <input type="range" value="0">
+
+            </table>
+        </div>
+
+        <div>
+            <form action="">
+                <label>Do you need any more materials?<span style="color:red">*</span><br></label>
+                <input type="radio">yes<br>
+                <input type="radio">No<br>
+            </form>
+            <form action="">
+                <label for="">What more do you need</label><br>
+                <input type="checkbox">sand<br>
+                <input type="checkbox">Bricks<br>
+                <input type="checkbox">Rods<br>
+                <input type="checkbox">other<br>
+            </form>
+            <form action="https://learn.rikkeiacademy.com/" method="get">
+                <label>any other comment</label><br>
+                <textarea cols="50" rows="4">
+                </textarea>
+            </form>
+        </div>
+        <input type="submit" value="Submit" class="submit" />
+    </main>
+
+</body>
+
+</html>

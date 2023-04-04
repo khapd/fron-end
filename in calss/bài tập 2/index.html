@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>index</title>
+  </head>
+  <style>
+    .ss9 {
+      padding: 50px;
+      border: 2px solid green;
+      border-radius: 20px;
+      margin: 20px;
+    }
+    td,
+    th {
+      min-width: 200px;
+      margin-left: 10px;
+    }
+
+    select {
+      width: 100px;
+    }
+    #result {
+      width: 500px;
+      padding: 20px;
+      font-size: 20px;
+    }
+    input,
+    select {
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <section class="ss9">
+      <h3>Bai 1</h3>
+      <button onclick="bai_1()">1. Bai tap 1</button>
+      <button onclick="bai_2()">2. Bai tap 2</button>
+      <button onclick="bai_3()">3. Bai tap 3</button>
+      <button onclick="bai_4()">4. Bai tap 4</button>
+    </section>
+
+    <h3>Bai 2 - chuyen doi tien te</h3>
+    <table>
+      <tr>
+        <th>Amount</th>
+        <th>From currency</th>
+        <th>To currency</th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>
+          <input
+            type="number"
+            name="amount"
+            id="amount"
+            placeholder="Nhap so tien muon chuyen doi"
+          />
+        </th>
+        <td>
+          <select name="currency" id="currency" onchange="onChange()">
+            <option value="VND" selected>VND</option>
+            <option value="USD">USD</option>
+          </select>
+        </td>
+        <td>
+          <input type="text" disabled id="to-currency" value="USD" />
+        </td>
+        <td><button onclick="convertCurrency()">Convert</button></td>
+      </tr>
+      <tr></tr>
+    </table>
+    <br />
+    <input
+      type="text"
+      disabled
+      placeholder="Nhan ket qua sau khi convert:"
+      id="result"
+    />
+  </body>
+  <script src="./script.js"></script>
+</html>

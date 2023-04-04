@@ -1,0 +1,36 @@
+body {
+    width: 30%;
+
+}
+
+.main {
+    width: 100%;
+}
+
+
+
+.title {
+    width: 100%;
+    background-color: black;
+    color: aliceblue;
+}
+
+.address>input {
+    width: 90%;
+}
+
+.address2 {
+    width: 100%;
+}
+
+
+
+.input>th {
+    margin-left: 20px;
+}
+
+.submit {
+    background-color: black;
+    color: aliceblue;
+    margin-left: 35%;
+}
