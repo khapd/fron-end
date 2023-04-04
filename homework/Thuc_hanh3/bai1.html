@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- use console .log -->
+    <script>
+        console.log('JavaScript');
+        console.log(7);
+        console.log(true);
+        console.log(null);
+        console.log(undefined);
+        console.log([1, 2, 3]);
+        console.log({ a: 1, b: 2, c: 3 });
+    </script>
+    <!-- use console .error -->
+    <script>console.error('Error found');</script>
+    <!-- use console .warn -->
+    <script>console.warn('Warning!');</script>
+    <!-- use console .clear -->
+    <script>console.clear()</script>
+    <!-- use  console.time & console.timeEnd-->
+    <script>console.time('timer');
+        const hello = function () {
+            console.log('Hello Console!');
+        }
+        const bye = function () {
+            console.log('Bye Console!');
+        }
+        hello(); // calling hello();
+        bye(); // calling bye();
+        console.timeEnd('timer');</script>
+    <!-- use console.table -->
+    <script>console.table({
+            a: 1, b: 2,
+            c: 3
+        });
+    </script>
+    <!-- use . console.count -->
+    <script>for (let i = 0; i < 3; i++) {
+            console.count(i);
+        }</script>
+    <!-- use console.group & console.groupEnd -->
+    <script>console.group('group1');
+        console.warn('warning');
+        console.error('error');
+        console.log('I belong to a group');
+        console.groupEnd();
+        console.log('I dont belong to any group');</script>
+</body>
+
+</html>
