@@ -1,0 +1,60 @@
+.body {}
+
+/* @media tyle */
+/* đối với desktop firts thì viết min-width từ lớn đến nhỏ */
+@media screen and (max-width:992px) {
+    body {
+        background-color: green;
+
+    }
+}
+
+@media screen and (max-width:500px) {
+    body {
+        background-color: #fff;
+    }
+}
+
+@media screen and (max-width:200px) {
+    body {
+        background-color: violet;
+    }
+}
+
+/* đối với mobi firts thì viết từ(min-width) nhỏ đến lớn */
+.desktop {
+    display: none;
+}
+
+- .table {
+    display: none;
+}
+
+.mobile {
+    font-size: 100px;
+}
+
+.test-2.content {
+    díplay: grid;
+
+}
+
+@media screen and (max-width:768px) {
+    body {
+        background-color: green;
+
+    }
+}
+
+@media screen and (max-width:500px) {
+    body {
+        background-color: #fff;
+    }
+}
+
+@media screen and (max-width:200px) {
+    body {
+
+        background-color: violet;
+    }
+}

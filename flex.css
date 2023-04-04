@@ -1,0 +1,60 @@
+.item{
+    width: 100px;
+    height:200px;
+    border: 2px solid red;
+    background: green;
+    font-size:30px;
+}
+/* nhúng thuộc tính css vào từng item */
+/* flex-grow: */
+/* flex-shrink:; */
+/* flex-basic:; */
+/* flex-self:; */
+
+.item-1{
+ flex-grow: 1;
+}
+.item-2{
+    flex-grow: 1;
+}
+.item-3{
+    flex-grow: 1;
+}
+.item-4{
+    flex-grow: 1;
+}
+.flex-1{
+    height:500px;
+    display: flex;
+
+/* những thuộc tính css vào parent */
+/* flex-direction - desault là row*/
+/* flex-wrap:xuống hàng hay ko? default: no-warp */
+flex-wrap :wrap;
+/*gap: khoản trống giữa các item */
+gap: 20px;
+/* justify-content bố cục item theo chièu ngang */
+justify-content: space-between;
+/* align-items:bố cục các item theo chiều dọc */
+/* align-content:bố cục các nội dung theo chiều dọc */
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+.navbar .menu{
+    display: flex;
+    gap:20px;
+     align-content: center;
+}
+.navbar li{
+    list-style-type: none;
+}
+.navbar li a {
+    text-decoration: none;
+}
+.navbar li:hover{
+    background-color: yellow;
+}

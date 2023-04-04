@@ -1,0 +1,71 @@
+header {
+    border-style: solid 1px;
+
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+
+
+}
+
+.menu {
+    border-style: solid 0;
+    width: 100%;
+    height: 200px;
+
+}
+
+.once {
+    font-size: 40px;
+    padding-left: 150px;
+
+}
+
+.all-button {
+    width: 100%;
+    height: 100%
+}
+
+.button {
+    border-radius: 4px;
+    background-color: rgb(26, 97, 220);
+    padding: 10px;
+    color: aliceblue;
+    border: none;
+    font-weight: 600;
+}
+
+.button2 {
+    border-radius: 4px;
+    background-color: darkgray;
+}
+
+.banner {
+    border-style: solid darkgray;
+
+    height: 350px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+
+    background-color: aquamarine;
+}
+
+.img {
+    position: relative;
+
+
+}
+
+body {
+    padding: 0 50px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.content {
+    border-style: solid;
+
+    background-color: white;
+
+}
