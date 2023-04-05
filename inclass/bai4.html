@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .album>*{
+            width: 700px;
+            height:200px;
+            background-size: contain;
+            border: 2px solid;
+        }
+        .img-head{
+            background-image: url(./image/images\ 1.jpg);
+            background-position: top ;
+            
+        }
+        .img-body{
+            background-image: url(./image/images\ 2.jpg);
+            background-position: center ;
+        }
+        
+        .img-foot{
+            background-image: url(./image/images\ 3.jpg);
+            background-position: bottom ;
+        }
+        .result{
+            color: red;
+            font-size: 20px;
+            font-weight: 700;
+            display: none;
+
+        }
+        .showphoto{
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="album">
+        <div class="img-head"onclick="changeImage()"></div>
+        <div class="img-body" onclick="changeImage()"></div>
+        <div class="img-foot" onclick="changeImage()"></div>
+        
+    </div>
+    <div class="result"></div>
+    <div class="showphoto"></div>
+    <script>
+        let x =1;
+function changeImage(element){
+    const img = element;
+    if (x>=4){
+        x=1
+    }
+    else{
+        x++
+    }
+    img.style.backgroundImage =`url(./image/images\ ${x}.jpg)`;
+    const result = document.querySelector('result');
+    const photos = document.querySelectorAll('album div');
+    const showphoto = document.querySelector('.showphoto')
+    let iscomplete = true
+    for(let i=0; i<3; i++){
+        if (photos[i].style.backgroundImage == img.style.backgroundImage){
+            iscomplete = false;
+            break;
+        } 
+    }
+    if( ícomplete){
+        result.style.display="block";
+        
+    }
+}
+    </script>
+</body>
+</html>
