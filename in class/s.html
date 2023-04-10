@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        padding: 10px;
+        margin-bottom: 50px;
+        border-radius: 20px;
+        border: 2px solid green;
+      }
+      input,
+      button {
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      hr {
+        margin-bottom: 20px;
+      }
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid;
+        border-collapse: collapse;
+      }
+      th {
+        text-align: center;
+      }
+      td {
+        width: 250px;
+        border: 0px;
+      }
+      #btn-update {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="Add neww product" id="add-product" />
+    <button onclick="handleAdd() " id="btn-add">Add</button>
+    <button id="btn-update">update</button>
+    <br />
+    <hr />
+    <table>
+      <tr>
+        <th>STT</th>
+        <th>product</th>
+        <th colspan="2">action</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>sony xperis</td>
+        <td><button onclick="handleEdit()" id="edit-Product">edit</button></td>
+        <td><button onclick="handleDelete()" id="deletete">delete</button></td>
+      </tr>
+    </table>
+    <script>
+      // xây sản phảm lấy  dữ liệu từ array
+      const product = ["sony", "nokia", "apple", "cục gạch", "b"];
+
+      function handleAdd() {
+        const valueInput = document.querySelector("#add-product").value;
+        product.push(valueInput);
+
+        // render sau mỗi lần add
+        renderProducts(product);
+      } // render lần đầu
+      renderProducts(product);
+      function renderProducts(data) {
+        // đặt ID để lấy đúng table mong muốn
+        const table = document.querySelector("table");
+        let contentTable = `<tr>
+            <th> STT</th>
+            <th>product</th>
+            <th colspan="2">action</th>
+        </tr>`;
+        data.forEach((product, index) => {
+          contentTable += `<tr>
+            <td> ${index + 1}</td>
+            <td><input value="${product}" readOnly id="product-${index}"/></td>
+            <td><button onclick="handleEdit(${index})">edit</button> </td>
+            <td ><button onclick="handleDelete(this)" id="deletete">delete</button> </td>
+        </tr>`;
+        });
+        table.innerHTML = contentTable;
+      }
+
+      function handleEdit(i){
+        console.log(i);
+       console.log(product[i]);
+       const inputProduct =document.querySelector(`#product-${i}`);
+       inputProduct.readOnly =false
+      }
+      function handleDelete(a){
+        console.log(a);
+
+
+
+      }
+    </script>
+  </body> 
+</html>

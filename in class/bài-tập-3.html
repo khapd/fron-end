@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 15px;
+        text-align: center;
+      }
+
+      #idtable {
+        width: 100%;
+      }
+      #idtable tr th:nth-child(1) {
+        width: 10%;
+      }
+      #idtable tr th:nth-child(3) {
+        width: 35%;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="1 2 3 ...." id="idtext" />
+    <button id="btnAdd" onclick="handleAdd()">Add</button>
+    <br /><br />
+    Bảng kết quả:
+
+    <table id="idtable" style="width: 500px"></table>
+    <script>
+      let myArray = [];
+      let updateArray = [];
+      let resultTable = [];
+      function handleAdd() {
+        const valueText = document.querySelector("#idtext").value;
+        // gán = bảng hiện tại đang cập nhật
+        myArray = updateArray;
+        // add giá trị trong input text vào mảng
+        myArray.push(valueText);
+        console.log(11, myArray);
+
+        renderProduct(myArray);
+      }
+
+      function renderProduct(data) {
+        let resultTable = `<tr> <th>STT</th> <th>Name</th> <th>Action</th> </tr>`;
+        for (let i = 0; i < data.length; i++) {
+          resultTable += "<tr>";
+          resultTable += `<td>${i + 1}</td> <td id="idname">${
+            data[i]
+          }</td> <td><button onclick="updateValue(${i + 1})">Update</button>
+             <button onclick="deleteValue(${i + 1})">Delete</button></td>`;
+             
+          resultTable += "</tr>";
+        }
+        document.querySelector("#idtable").innerHTML = resultTable;
+      }
+
+      function updateValue(x) {
+        const valueUpdate = prompt(
+          "Cập nhật lại tên mới của sản phẩm là:"
+        );
+        console.log("update", valueUpdate);
+
+        document.querySelector("#idtable").rows[ x].cells[1].innerHTML = valueUpdate;
+
+        resultTable = document.querySelector("#idtable").innerHTML;
+        console.log("new", resultTable);
+        console.log(
+          "row",
+          document.querySelector("#idtable").rows.length
+        );
+
+        // update lại giá trị của mảng Array
+        lengthArrayUpdate =
+          document.querySelector("#idtable").rows.length;
+        updateArray = [];
+        for (let i = 0; i < lengthArrayUpdate - 1; i++) {
+          updateArray.push(
+            document.querySelector("#idtable").rows[i + 1].cells[1]
+              .innerHTML
+          );
+        }
+        console.log("updateARR", updateArray);
+      }
+
+      function deleteValue(x) {
+        document.querySelector("#idtable").deleteRow(x);
+
+        // update lại giá trị của mảng Array
+        lengthArrayUpdate =
+          document.querySelector("#idtable").rows.length;
+        updateArray = [];
+        for (let i = 0; i < lengthArrayUpdate - 1; i++) {
+          updateArray.push(
+            document.querySelector("#idtable").rows[i + 1].cells[1]
+              .innerHTML
+          );
+        }
+        console.log("updateARR", updateArray);
+        renderProduct(updateArray);
+       
+      }
+    </script>
+  </body>
+</html>

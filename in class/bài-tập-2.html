@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- chuyển từ foot->met -->
+    <input type="text" oninput="footToMeter(this.value)"placeholder=" foot to met">
+    <span>To met</span>
+    <input type="text" id="foot-to-met">
+    <br> 
+    <br>
+    <!-- chuyển từ met -> foot -->
+    <input type="text" oninput="meterToFoot(this.value)"placeholder="met-to-foot">
+    <span>To foot</span>
+    <input type="text" id="met-to-foot">
+    <br> 
+    <br>
+    <script>
+        // chuyển từ foot ->met
+function footToMeter(foot){
+    const meter = 0.305 * foot;
+    const resultMet = document.querySelector("#foot-to-met");
+    resultMet.value = meter + "met";
+}
+// chuyển từ met ->foot
+function meterToFoot(meter){
+    const foot =3.279 *meter;
+    const resultMet = document.querySelector("#met-to-foot");
+    resultMet.value = foot + "foot";
+}
+
+
+    </script>
+</body>
+</html>
