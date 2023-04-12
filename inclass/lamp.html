@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>eat</button>
+    <script>
+        const person = {
+            firstName: "hưng",
+            lastName: "nguyễn",
+            fullName: ()=>{this.firstName+" "+ lastName;
+            },
+        };
+        
+        function Lamp(status,battery){ 
+            this.battery = battery;
+            // pin của đèn
+              (this.satus =status)          
+            //   trạng thái bật tắt cuat bóng đèn
+            (this.getBattery = () =>this.batery);
+            this.setBattery =(speed)=>{
+                this.setBattery -= speed;
+            } 
+         }
+         const LAMP_1 = new Lamp(true,100);
+        //  method setIntreval -->thực hiện lặp lại khối lệnh khoảng thời gian
+        // method setTimeout --> thực thi khối lệnh sau khoảng thời gian
+        setInterval(()=>{
+            LAMP_1.setBattery(1);
+            if(LAMP_1.getBattery()<=0){
+                LAMP_1.setStatus(false);
+            }
+            if(!LAMP_1.status){
+                clearInterval(time);
+            }
+            console.log("kiểm tra đèn",LAMP_1.getBattery());
+        },10) 
+
+
+        // tạo person
+        function person(name,weight,gender){
+            this.name=name;
+            this.weight=weight;
+            this.gender=gender;
+            this.getGender = ()=> this.gender
+            this.getEat = (food) => {
+                if(food.getSize()>0){
+                    this.weight++;
+                }
+                else{
+                    alert("hết")
+                }
+            };
+            this.SetWeight=()=>{
+                this.weight++;
+            }
+            this.getKiss = (person) =>{
+          if(person.getGender() != this.gender&& !this.isMarried && person.getMarried()){
+            this.weight--;
+
+          }
+            }
+        }
+        function Food(name,size){
+            this.name = name;
+            this.size = size;
+            this.getSize = () =>this.size--;
+
+        }
+        const apple = new Food('apple',50)
+        const Adam = new person('Adam',60,true)
+
+        function handleEat(){
+            Adam.getEat(apple);
+            console.log('kiểm tra Adam',Adam);
+            console.log('kiểm tra táo',apple);
+        }
+
+        const people=[
+        new Person('eva',50,false,false),
+        new Person('khoa',70,true,true),
+        new Person('kha',70,true,false), 
+        ];
+         people[2].getKiss(people[1])
+
+        //  xây dựng hàm find trong array
+        function Array2(array){
+            this.value =array
+            this.find=(value) => {
+                for(let i=0;i<this.array.length;i++){
+                    if(this.array[i] === value){
+                        return this.array[i]
+                    }
+
+                }
+
+            }
+        }
+        const arr=new Array2(['hi','tú','phúc'])
+       const result = arr.find('tú')
+       console.log(result);
+    </script>
+</body>
+</html>
