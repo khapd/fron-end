@@ -1,0 +1,48 @@
+.title{
+    border: 1px solid;
+    width: 100%;
+    background-color: rgb(61, 7, 7);
+    color: white;
+    text-align: center;
+  
+}
+body{
+    width: 60%;
+    margin: auto;
+} 
+tr> th {
+    border: 1px solid;
+    width: 210px;
+}
+.stt{
+    width: 50px;
+}
+.image > img{
+    width: 150px;
+    height: 200px;
+}
+.gia{
+    width: 150px;
+}
+.action{
+    width: 240px;
+}
+table{
+    text-align: center;
+}
+.form-card >label{
+    margin-right: 150px;
+    margin-top: 1px;
+}
+.form-card > input{
+    margin-top: 5px
+}
+
+thead>tr>th{
+    border:0px solid black;
+    
+}
+.submit{
+    margin-left: 30%;
+    margin-top:10px
+}

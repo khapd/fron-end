@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" class="">
+</head>
+<body>
+    <header></header>
+    <main>
+
+    </main><div clas="banner">
+        <img src="./images/pepsicoailesi-1990.png" width="100%">
+    </div>
+    <div class="title">
+        <b>sản phẩm nổi bật</b>
+    </div>
+    <header>
+    <!-- thêm sản phẩm -->
+    <div class="form-add">
+        <h2>thêm 1 thức uống mới</h2>
+    </div>
+     <table> 
+     <div class="form-card">
+        <label for="id-product">ID sản phẩm</label>
+        <input type="text" name="" id="id-product">
+     </div>
+     <div class="form-card">
+        <label for="image">hình ảnh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="file" name="" id="product-image">
+     </div>
+     <div class="form-card">
+        <label for="product-name">tên sản phẩm</label>
+        <input type="text" name="" id="product-name">
+     </div>
+     <div class="form-card">
+        <label for="price-product">giá sản phẩm</label>
+        <input type="text" name="" id="price-product">
+     </div>
+     <button onclick="handleAdd()" class="submit">thêm sản phẩm</button>
+     <hr>
+     
+     <!-- sửa sản phẩm -->
+        <div >
+           <h2>sửa sản phẩm</h2> 
+        </div>
+        <div class="form-card">
+        <label for="id-product">ID sản phẩm</label>
+        <input type="text" name="" id="id-product">
+     </div>
+     <div class="form-card">
+        <label for="image">hình  ảnh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="file" name="" id="iimage">
+     </div>
+     <div class="form-card">
+        <label for="product-name">tên sản phẩm</label>
+        <input type="text" name="" id="pproduct-name">
+     </div>
+     <div class="form-card">
+        <label for="price-product">giá sản phẩm</label>
+        <input type="text" name="" id="pprice-product">
+     </div>
+     <button onclick="handleEdit()" class="submit">edit sản phẩm</button>
+     <hr>
+     <div>
+        <label for="price-product"><b>tìm kiếm sản phẩm</b></label>
+        <br>
+        <input type="text" name="" id="input-search">
+        <button onclick="handleSearch()">tìm kiếm</button><br>
+        
+
+     </div>
+    </header>
+<hr>
+     <thead>
+        <tr>
+            <th class="stt">#</th>
+            <th class="image">ảnh</th>
+            <th class="name">tên sản phẩm</th>
+            <th class="gia">giá</th>
+            <th class="action"> action</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="stt">1</td>
+            <td class="image"><img src="./images/tải xuống (1).jpg"></td>
+            <td class="name">nước chanh</td>
+            <td class="gia">25k</td>
+            <td class="action"> 
+                <button style="border: 1px solid blue;">Edit</button>
+                <button style="border: 1px solid red;">del</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="stt">2</td>
+            <td class="image"><img src="./images/tải xuống (2).jpg"></td>
+            <td class="name">coca cola</td>
+            <td class="gia">20k</td>
+            <td class="action"> 
+                <button style="border: 1px solid blue;">Edit</button>
+                <button style="border: 1px solid red;">del</button>
+            </td>
+        </tr>
+        
+    </tbody>
+    </table>
+
+</main>
+    <script src="index.js"></script>
+</body>
+</html>
